@@ -6,6 +6,7 @@ import store from './store'
 // 重置样式使用normalize.css，项目公用样式common.less
 import '@/assets/styles/normalize.css'
 import '@/assets/styles/common.less'
+import '@/assets/styles/font.css'
 
 // 测试Vuex本地存储持久化
 // store.commit('user/setUser', { id: 'abc' })

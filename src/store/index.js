@@ -2,8 +2,6 @@
 import { createStore } from 'vuex'
 
 // 模块导入
-// import moduleA from './module/a'
-// import moduleB from './module/b'
 import user from './module/user'
 import cart from './module/cart'
 import category from './module/category'
@@ -15,8 +13,6 @@ import createPersistedstate from 'vuex-persistedstate'
 export default createStore({
   modules: {
     // 模块化
-    // moduleA,
-    // moduleB
     user,
     cart,
     category
