@@ -5,15 +5,16 @@
     <!-- 二级路由 -->
     <router-view />
   </main>
-  <footer></footer>
+  <app-footer />
 </template>
 
 <script>
-import appTopnav from '@/components/app-topnav'
+import AppTopnav from '@/components/app-topnav'
 import AppHeader from '@/components/app-header'
+import AppFooter from '@/components/app-footer'
 export default {
   name: 'xtx-layout',
-  components: { appTopnav, AppHeader }
+  components: { AppTopnav, AppHeader, AppFooter }
 }
 </script>
 

@@ -28,7 +28,7 @@
 import { useStore } from 'vuex'
 import { computed } from 'vue'
 export default {
-  name: 'APPTopNav',
+  name: 'AppTopNav',
   setup () {
     const store = useStore()
     const profile = computed(() => {
