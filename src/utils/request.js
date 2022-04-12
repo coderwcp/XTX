@@ -12,7 +12,7 @@ import axios from 'axios'
 // 2. 创建axios实例
 const instance = axios.create({
   // 基地址
-  baseURL: '',
+  baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net/',
   // 超时时间
   timeout: 5000
 })

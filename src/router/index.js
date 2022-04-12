@@ -1,7 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import Layout from '@/views/Logout'
-import Home from '@/views/Home'
+const Layout = () => import('@/views/Logout')
+const Home = () => import('@/views/Home')
+const TopCategory = () => import('@/views/Category')
+const SubCategory = () => import('@/views/Category/sub-category')
 
 const staticRoutes = [
   {
@@ -12,6 +14,14 @@ const staticRoutes = [
       {
         path: '/',
         component: Home
+      },
+      {
+        path: '/category/:id',
+        component: TopCategory
+      },
+      {
+        path: '/category/sub/:id',
+        component: SubCategory
       }
     ]
   }

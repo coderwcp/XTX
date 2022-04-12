@@ -1,17 +1,19 @@
 <template>
-  <div class="xtx-home-page">
-    123
+  <div class="page-home">
+    <div class="home-entry">
+      <div class="container">
+        <!-- 左侧分类 -->
+        <HomeCategory />
+      </div>
+    </div>
   </div>
 </template>
-
 <script>
+import HomeCategory from './components/home-category'
+
 export default {
-  name: 'xtx-home'
+  name: 'PageHome',
+  components: { HomeCategory }
 }
 </script>
-
-<style lang="less" scoped>
-  .xtx-home-page{
-    color: @xtxColor;
-  }
-</style>
+<style scoped lang="less"></style>
