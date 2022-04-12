@@ -22,7 +22,7 @@
 
   <!-- 弹层 -->
   <div class="layer">
-    <h4 v-if="currCategory">{{currCategory.id==='brand'?'品牌':'分类'}}推荐 <small>根据您的购买或浏览记录推荐</small></h4>
+    <h4 v-if="currentCategory">{{currentCategory.id==='brand'?'品牌':'分类'}}推荐 <small>根据您的购买或浏览记录推荐</small></h4>
     <ul v-if="currentCategory && currentCategory.goods && currentCategory.goods.length">
       <li v-for="item in currentCategory.goods" :key="item.id">
         <RouterLink to="/">
@@ -115,7 +115,7 @@ export default {
 .home-category {
   width: 250px;
   height: 500px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 99;
   .menu {
