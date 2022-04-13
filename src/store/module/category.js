@@ -29,7 +29,7 @@ const actions = {
   // getList (context) {
   async getList ({ commit }) {
     const { result } = await getAllCategory()
-    console.log(result)
+    // console.log('分类列表', result)
     // 给一级分类加上一个控制二级分类显示隐藏的数据open
     result.forEach((item) => {
       item.open = false

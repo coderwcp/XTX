@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { computed } from '@vue/runtime-core'
+import { computed } from 'vue'
 import { useStore } from 'vuex'
 export default {
   name: 'AppHeaderNav',
@@ -59,6 +59,12 @@ export default {
   position: relative;
   z-index: 998;
   > li {
+    &.active{
+      > a{
+        color: @xtxColor;
+        border-bottom: 1px solid @xtxColor;
+      }
+    }
     margin-right: 40px;
     width: 38px;
     text-align: center;

@@ -100,8 +100,8 @@ export default {
     getBrand().then(data => {
       brand.brands = data.result
     })
-    console.log(brand)
-    console.log(currentCategory)
+    // console.log(brand)
+    // console.log(currentCategory)
     return {
       menuList,
       categoryId,

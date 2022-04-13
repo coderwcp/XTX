@@ -2,7 +2,7 @@ const path = require('path')
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  lintOnSave: false,
+  // lintOnSave: false,
 
   pluginOptions: {
     // style-resoures-loader 插件来完成自动注入到每个less文件或者vue组件中style标签中
