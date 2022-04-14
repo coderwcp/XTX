@@ -4,6 +4,7 @@ const Layout = () => import('@/views/Logout')
 const Home = () => import('@/views/Home')
 const TopCategory = () => import('@/views/Category')
 const SubCategory = () => import('@/views/Category/sub-category')
+const Goods = () => import('@/views/Goods')
 
 const staticRoutes = [
   {
@@ -22,6 +23,10 @@ const staticRoutes = [
       {
         path: '/category/sub/:id',
         component: SubCategory
+      },
+      {
+        path: '/product/:id',
+        component: Goods
       }
     ]
   }
