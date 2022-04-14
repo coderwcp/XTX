@@ -3,19 +3,40 @@
 // vue2.0插件写法要素：导出一个对象，有install函数，默认传入了Vue构造函数，Vue基础之上扩展
 // vue3.0插件写法要素：导出一个对象，有install函数，默认传入了app应用实例，app基础之上扩展
 
-import XtxSkeleton from './xtx-skeleton'
-import XtxCarousel from './xtx-carousel'
-import XtxMore from './xtx-more'
+// import XtxSkeleton from './xtx-skeleton'
+// import XtxCarousel from './xtx-carousel'
+// import XtxMore from './xtx-more'
+// import XtxBread from './xtx-bread'
+import defaultImg from '@/assets/images/200.png'
+// import XtxBreadItem from './xtx-bread-item'
 
-import defaultImg from '@/assets/images/qrcode.jpg'
+// 导入library文件下的所有组件
+// 批量导入需要使用一个函数 require.context(dir,deep,matching)
+// 参数：1. 目录  2. 是否加载子目录  3. 加载的正则匹配
+const importFn = require.context('./', false, /\.vue$/)
+
+// keys() 获取读取到的所有文件列表
+// console.log(importFn.keys())
 
 export default {
   install (app) {
     // 在app上进行扩展，app提供 component directive 函数
     // 如果要挂载原型 app.config.globalProperties 方式
-    app.component(XtxSkeleton.name, XtxSkeleton)
-    app.component(XtxCarousel.name, XtxCarousel)
-    app.component(XtxMore.name, XtxMore)
+    // app.component(XtxSkeleton.name, XtxSkeleton)
+    // app.component(XtxCarousel.name, XtxCarousel)
+    // app.component(XtxMore.name, XtxMore)
+    // app.component(XtxBread.name, XtxBread)
+    // app.component(XtxBreadItem.name, XtxBreadItem)
+
+    // 批量注册全局组件
+    importFn.keys().forEach(key => {
+      // 导入组件
+      const component = importFn(key).default
+      // console.log(component)
+      // 注册组件
+      app.component(component.name, component)
+    })
+
     defineDirective(app)
   }
 }
